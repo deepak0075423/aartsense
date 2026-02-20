@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — AartSense Studios</title>
+  <meta name="description" content="Explore AartSense Studios' portfolio — 500+ projects including film scores, TV commercials, album productions, documentaries and wedding anthems." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    /* Extended portfolio styles */
+    .portfolio-meta { display:flex; align-items:center; gap:1.5rem; margin-top:1rem; flex-wrap:wrap; }
+    .meta-tag { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--text-muted); background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); padding:.25rem .75rem; border-radius:50px; }
+    .featured-project { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; background:var(--bg-card); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin-bottom:1.5rem; }
+    .featured-project .project-visual { aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; font-size:8rem; position:relative; }
+    .featured-project .project-info { padding:3rem; }
+    .project-category { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--gold); text-transform:uppercase; letter-spacing:.18em; margin-bottom:.75rem; }
+    .project-title { font-family:'Playfair Display',serif; font-size:2rem; margin-bottom:1rem; }
+    .project-desc { font-size:.9rem; color:var(--text-secondary); line-height:1.8; margin-bottom:1.5rem; }
+    .project-details { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-bottom:2rem; }
+    .project-detail h5 { font-size:.72rem; font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.12em; color:var(--text-muted); margin-bottom:.25rem; }
+    .project-detail p  { font-size:.88rem; color:var(--text-secondary); }
+    .testimonials-mini { background:var(--bg-secondary); border:1px solid var(--border); border-radius:8px; padding:1.25rem; margin-top:1rem; font-style:italic; font-size:.88rem; color:var(--text-secondary); line-height:1.7; }
+    .testimonials-mini cite { display:block; margin-top:.5rem; font-style:normal; font-size:.78rem; color:var(--gold); }
+    @media (max-width:768px) {
+      .featured-project { grid-template-columns:1fr; }
+      .featured-project .project-visual { aspect-ratio:16/9; }
+      .featured-project .project-info { padding:2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-bar"></span><span class="logo-bar"></span>
+          <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Aart<span>Sense</span></span>
+          <span class="logo-tagline">Studios · Est. 2021</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="studio.html">The Studio</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Portfolio</span>
+      </div>
+      <span class="section-label">Our Work</span>
+      <h1>500+ Projects.<br>One Studio.</h1>
+      <p>A curated selection from our extensive portfolio — spanning film, advertising, albums, documentaries and everything in between.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="number" data-target="500" data-suffix="+">0</div>
+          <div class="label">Total Projects</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="number" data-target="85" data-suffix="+">0</div>
+          <div class="label">Film & TV Scores</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="number" data-target="220" data-suffix="+">0</div>
+          <div class="label">Commercial Tracks</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="number" data-target="60" data-suffix="+">0</div>
+          <div class="label">Albums Produced</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Spotlight</span>
+        <h2 class="section-title reveal reveal-delay-1">Featured Projects</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+      </div>
+
+      <!-- Featured 1 -->
+      <div class="featured-project reveal">
+        <div class="project-visual" style="background:linear-gradient(135deg,#1a0533,#3d0b6e,#0a0a1a);">🎬</div>
+        <div class="project-info">
+          <div class="project-category">Feature Film Score</div>
+          <div class="project-title">Echoes of Mumbai</div>
+          <p class="project-desc">A sweeping orchestral score for this critically acclaimed drama following three generations of a Mumbai family. The music weaves Indian classical ragas with modern orchestral textures to bridge past and present.</p>
+          <div class="project-details">
+            <div class="project-detail"><h5>Director</h5><p>Rajan Mehta</p></div>
+            <div class="project-detail"><h5>Year</h5><p>2024</p></div>
+            <div class="project-detail"><h5>Duration</h5><p>94 minutes</p></div>
+            <div class="project-detail"><h5>Style</h5><p>Orchestral / Indian Classical</p></div>
+          </div>
+          <div class="testimonials-mini">"The score gave the film its soul. Arjuna understood our vision on the first listen."<cite>— Rajan Mehta, Director</cite></div>
+        </div>
+      </div>
+
+      <!-- Featured 2 -->
+      <div class="featured-project reveal" style="direction:rtl;">
+        <div class="project-visual" style="background:linear-gradient(135deg,#1a1000,#4a3000,#0a0800); direction:ltr;">📺</div>
+        <div class="project-info" style="direction:ltr;">
+          <div class="project-category">TV Commercial</div>
+          <div class="project-title">Titan Motors — Drive Further</div>
+          <p class="project-desc">A high-energy, emotionally charged commercial score for Titan Motors' flagship UK campaign. The brief called for music that felt both aspirational and grounded — cinematic yet relatable.</p>
+          <div class="project-details">
+            <div class="project-detail"><h5>Client</h5><p>Titan Motors UK</p></div>
+            <div class="project-detail"><h5>Year</h5><p>2024</p></div>
+            <div class="project-detail"><h5>Agency</h5><p>Ogilvy London</p></div>
+            <div class="project-detail"><h5>Style</h5><p>Cinematic / Orchestral Pop</p></div>
+          </div>
+          <div class="testimonials-mini">"Within 24 hours of airing, our marketing team knew the music was half the campaign's success."<cite>— Sarah Thompson, Creative Director, Ogilvy UK</cite></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL PROJECTS GRID -->
+  <section class="section" style="background:var(--bg-secondary); border-top:1px solid var(--border); padding-top:4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Browse By Category</span>
+        <h2 class="section-title reveal reveal-delay-1">All Projects</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+      </div>
+
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="film">Film & TV</button>
+        <button class="filter-btn" data-filter="commercial">Commercials</button>
+        <button class="filter-btn" data-filter="album">Albums</button>
+        <button class="filter-btn" data-filter="documentary">Documentary</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item portfolio-item-large reveal" data-category="film">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a0533 0%,#3d0b6e 50%,#0a0a1a 100%);"></div>
+            <div class="portfolio-icon">🎬</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Echoes of Mumbai</h4>
+              <span>Feature Film Score · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-1" data-category="commercial">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a1000 0%,#4a3000 50%,#0a0800 100%);"></div>
+            <div class="portfolio-icon">📺</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Titan Motors Campaign</h4>
+              <span>TV Commercial · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="album">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#001533 0%,#003d6e 50%,#000a1a 100%);"></div>
+            <div class="portfolio-icon">🎵</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Soulful Strings</h4>
+              <span>Original Album · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-1" data-category="commercial">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#001a0d 0%,#004d26 50%,#000a05 100%);"></div>
+            <div class="portfolio-icon">✈️</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Air India Brand Film</h4>
+              <span>Brand Score · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-2" data-category="documentary">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a001a 0%,#4a0033 50%,#0a0005 100%);"></div>
+            <div class="portfolio-icon">🎭</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>The Silent River</h4>
+              <span>Documentary Score · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item portfolio-item-large reveal" data-category="wedding">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a0d00 0%,#4d2600 50%,#0a0500 100%);"></div>
+            <div class="portfolio-icon">💍</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Radhe & Rhea — Our Song</h4>
+              <span>Wedding Anthem · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="film">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#001a1a 0%,#004d4d 50%,#000a0a 100%);"></div>
+            <div class="portfolio-icon">🌊</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Tides of Kochi</h4>
+              <span>Short Film Score · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-1" data-category="commercial">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#0d0033 0%,#26006e 50%,#050014 100%);"></div>
+            <div class="portfolio-icon">🛒</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Durga Puja — Festival Campaign</h4>
+              <span>Ad Score · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-2" data-category="album">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a1500 0%,#4d3e00 50%,#0a0800 100%);"></div>
+            <div class="portfolio-icon">🎸</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Midnight in Varanasi</h4>
+              <span>Fusion Album · 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="documentary">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#001500 0%,#004d00 50%,#000a00 100%);"></div>
+            <div class="portfolio-icon">🌿</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Rewilding Britain</h4>
+              <span>Documentary · 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-1" data-category="wedding">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a0000 0%,#4d0000 50%,#0a0000 100%);"></div>
+            <div class="portfolio-icon">🌹</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>Ananya & Aryan</h4>
+              <span>Wedding Suite · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal reveal-delay-2" data-category="film">
+          <div class="portfolio-visual">
+            <div class="portfolio-bg" style="background:linear-gradient(135deg,#00001a 0%,#00006e 50%,#000014 100%);"></div>
+            <div class="portfolio-icon">🌙</div>
+            <div class="portfolio-play">▶</div>
+            <div class="portfolio-overlay">
+              <h4>The Last Letter</h4>
+              <span>Short Film · 2022</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GENRES / STYLES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Musical Range</span>
+        <h2 class="section-title reveal reveal-delay-1">Genres & Styles</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">Our musical fluency spans a vast spectrum — allowing us to serve virtually any creative brief with authenticity.</p>
+      </div>
+      <div class="equipment-grid">
+        <div class="equipment-card reveal"><div class="equipment-icon">🎻</div><div class="equipment-name">Orchestral</div><div class="equipment-brand">Classical & Cinematic</div></div>
+        <div class="equipment-card reveal reveal-delay-1"><div class="equipment-icon">🥁</div><div class="equipment-name">Bollywood</div><div class="equipment-brand">Indian Film Music</div></div>
+        <div class="equipment-card reveal reveal-delay-2"><div class="equipment-icon">🎹</div><div class="equipment-name">Ambient</div><div class="equipment-brand">Electronic & Textural</div></div>
+        <div class="equipment-card reveal reveal-delay-3"><div class="equipment-icon">🎸</div><div class="equipment-name">Rock / Pop</div><div class="equipment-brand">Contemporary</div></div>
+        <div class="equipment-card reveal"><div class="equipment-icon">🪘</div><div class="equipment-name">Indian Classical</div><div class="equipment-brand">Ragas & Talas</div></div>
+        <div class="equipment-card reveal reveal-delay-1"><div class="equipment-icon">🎺</div><div class="equipment-name">Jazz</div><div class="equipment-brand">Modern & Traditional</div></div>
+        <div class="equipment-card reveal reveal-delay-2"><div class="equipment-icon">🎷</div><div class="equipment-name">World Music</div><div class="equipment-brand">Fusion & Roots</div></div>
+        <div class="equipment-card reveal reveal-delay-3"><div class="equipment-icon">🔊</div><div class="equipment-name">Sound Design</div><div class="equipment-brand">Experimental & FX</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="reveal">Your Project Could Be Next</h2>
+      <p class="reveal reveal-delay-1">We'd love to hear about your project and explore how we can create something extraordinary together.</p>
+      <div class="cta-actions reveal reveal-delay-2">
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        <a href="services.html" class="btn btn-ghost">View Our Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-icon">
+              <span class="logo-bar"></span><span class="logo-bar"></span>
+              <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Aart<span>Sense</span></span>
+              <span class="logo-tagline">Studios · Est. 2021</span>
+            </div>
+          </a>
+          <p>Award-winning music production house based in England, UK.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/aartsensestudios/" target="_blank" class="social-link">📷</a>
+            <a href="#" class="social-link">▶</a>
+            <a href="#" class="social-link">🎵</a>
+            <a href="#" class="social-link">☁</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="studio.html">The Studio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Film Scoring</a></li>
+            <li><a href="services.html">Commercial Music</a></li>
+            <li><a href="services.html">Recording Studio</a></li>
+            <li><a href="services.html">Mixing & Mastering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@aartsense.co.uk">hello@aartsense.co.uk</a></li>
+            <li><a href="#">England, United Kingdom</a></li>
+            <li><a href="contact.html">Book a Session</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-bottom" style="margin-top:2rem;">
+        <p>&copy; 2026 AartSense Studios Ltd. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AartSense Studios</title>
+  <meta name="description" content="Get in touch with AartSense Studios — book a session, discuss your project, or simply say hello. Based in England, UK." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .faq-list { display:flex; flex-direction:column; gap:1rem; }
+    .faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+    .faq-question {
+      padding:1.25rem 1.5rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+      font-weight:600; font-size:.92rem; transition:var(--transition); user-select:none;
+    }
+    .faq-question:hover { color:var(--gold); }
+    .faq-question::after { content:'+'; font-size:1.3rem; color:var(--gold); transition:var(--transition); flex-shrink:0; margin-left:1rem; }
+    .faq-item.open .faq-question::after { content:'−'; }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s ease; }
+    .faq-item.open .faq-answer { max-height:200px; }
+    .faq-answer p { padding:0 1.5rem 1.25rem; font-size:.88rem; color:var(--text-secondary); line-height:1.8; }
+    .map-placeholder {
+      background:linear-gradient(135deg, var(--bg-card), rgba(123,47,190,.2));
+      border:1px solid var(--border); border-radius:16px; aspect-ratio:16/9;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      font-size:4rem; gap:1rem; color:var(--text-muted);
+    }
+    .map-placeholder p { font-size:.9rem; color:var(--text-secondary); }
+    .contact-info-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:2.5rem; }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-bar"></span><span class="logo-bar"></span>
+          <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Aart<span>Sense</span></span>
+          <span class="logo-tagline">Studios · Est. 2021</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="studio.html">The Studio</a></li>
+        <li><a href="contact.html" class="nav-cta active">Book a Session</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Contact</span>
+      </div>
+      <span class="section-label">Get In Touch</span>
+      <h1>Let's Create<br>Something Together</h1>
+      <p>Whether you have a full brief ready or just a spark of an idea — we'd love to hear from you. Every great project starts with a conversation.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Contact Info -->
+        <div>
+          <div class="contact-info-card reveal">
+            <span class="section-label">Reach Us</span>
+            <h2 style="font-size:1.8rem; margin-bottom:2rem; background:linear-gradient(135deg,#fff,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Contact Information</h2>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div class="contact-detail-text">
+                <h4>Email Us</h4>
+                <a href="mailto:hello@aartsense.co.uk">hello@aartsense.co.uk</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <h4>Call Us</h4>
+                <a href="tel:+441234567890">+44 (0) 123 456 7890</a>
+                <p style="font-size:.78rem; margin-top:.2rem; color:var(--text-muted);">Mon – Fri, 9am – 6pm GMT</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <h4>Our Location</h4>
+                <p>England, United Kingdom</p>
+                <p style="font-size:.78rem; margin-top:.2rem; color:var(--text-muted);">Exact address shared on booking confirmation</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🕐</div>
+              <div class="contact-detail-text">
+                <h4>Studio Hours</h4>
+                <p>Monday – Friday: 9am – 10pm</p>
+                <p>Saturday: 10am – 8pm</p>
+                <p>Sunday: By arrangement</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🌐</div>
+              <div class="contact-detail-text">
+                <h4>Website</h4>
+                <a href="https://www.aartsense.co.uk" target="_blank">www.aartsense.co.uk</a>
+              </div>
+            </div>
+
+            <div class="divider" style="margin:2rem 0;"></div>
+
+            <h4 style="font-family:'JetBrains Mono',monospace; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/aartsensestudios/" target="_blank" class="social-link" title="Instagram @aartsensestudios">📷</a>
+              <a href="#" class="social-link" title="YouTube">▶</a>
+              <a href="#" class="social-link" title="Spotify">🎵</a>
+              <a href="#" class="social-link" title="SoundCloud">☁</a>
+              <a href="#" class="social-link" title="LinkedIn">💼</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="reveal reveal-delay-1">
+          <div class="contact-form">
+            <span class="section-label">Send a Message</span>
+            <h2 style="font-size:1.8rem; margin-bottom:.5rem; background:linear-gradient(135deg,#fff,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tell Us About Your Project</h2>
+            <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:2rem; line-height:1.75;">Fill in the details below and we'll get back to you within 24 hours. The more context you give us, the better we can respond.</p>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Arjuna" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Patel" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+44 ..." />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Production House</label>
+                <input type="text" id="company" name="company" placeholder="Optional" />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="film-scoring">Film Scoring</option>
+                  <option value="commercial">Commercial Music</option>
+                  <option value="recording">Recording Studio Booking</option>
+                  <option value="mixing">Mixing & Mastering</option>
+                  <option value="album">Album Production</option>
+                  <option value="artist-dev">Artist Development</option>
+                  <option value="wedding">Wedding Anthem</option>
+                  <option value="sound-design">Sound Design</option>
+                  <option value="licensing">Music Licensing</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="budget">Approximate Budget</label>
+                  <select id="budget" name="budget">
+                    <option value="" disabled selected>Select range…</option>
+                    <option value="under-500">Under £500</option>
+                    <option value="500-1500">£500 – £1,500</option>
+                    <option value="1500-5000">£1,500 – £5,000</option>
+                    <option value="5000-15000">£5,000 – £15,000</option>
+                    <option value="15000-plus">£15,000+</option>
+                    <option value="tbd">To be discussed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="timeline">Project Timeline</label>
+                  <select id="timeline" name="timeline">
+                    <option value="" disabled selected>Select timeline…</option>
+                    <option value="asap">As soon as possible</option>
+                    <option value="2-weeks">Within 2 weeks</option>
+                    <option value="1-month">Within 1 month</option>
+                    <option value="3-months">Within 3 months</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Description *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project — genre, mood, reference tracks, deadlines, and any other details that would help us understand your vision…" required></textarea>
+              </div>
+
+              <div class="form-group" style="display:flex; align-items:flex-start; gap:.75rem;">
+                <input type="checkbox" id="consent" name="consent" required style="width:auto; min-width:18px; height:18px; margin-top:2px; accent-color:var(--gold);" />
+                <label for="consent" style="font-size:.82rem; color:var(--text-secondary); line-height:1.6; cursor:pointer;">I agree to AartSense Studios processing my information to respond to this enquiry. I understand my data will not be shared with third parties.</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:1rem;">
+                Send Message →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="map-placeholder reveal">
+        <span>📍</span>
+        <p>AartSense Studios — England, United Kingdom</p>
+        <p style="font-size:.78rem; color:var(--text-muted);">Exact address shared on booking confirmation to protect studio privacy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" style="background:var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header">
+        <span class="section-label reveal">Quick Answers</span>
+        <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <div class="faq-question">How quickly can you start on my project?</div>
+          <div class="faq-answer"><p>For most projects, we can begin within 1–2 weeks of agreeing scope and receiving a deposit. Rush projects can sometimes be accommodated — please enquire and we'll do our best to fit your timeline.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you work with clients remotely / outside the UK?</div>
+          <div class="faq-answer"><p>Absolutely. A significant portion of our work is done remotely with clients in India, USA, UAE and beyond. We use video calls for creative discussions and deliver files digitally. For studio bookings, clients travel to our England facility.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Who owns the music once it's created?</div>
+          <div class="faq-answer"><p>It depends on the arrangement. For bespoke commissioned work, the client typically receives full copyright upon final payment. For collaborative projects, co-publishing arrangements can be discussed. We'll be transparent about rights from the outset.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How many revision rounds do I get?</div>
+          <div class="faq-answer"><p>This varies by package — our Essential package includes 2 revision rounds, Professional includes unlimited revisions within scope. We find most projects are finalised within 2–3 rounds regardless, as we front-load the brief and creative process.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I bring my own musicians to the studio?</div>
+          <div class="faq-answer"><p>Yes, absolutely. Our studio welcomes external musicians. We can also arrange session musicians for you if needed — we have a trusted network of professional instrumentalists across multiple genres.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you offer a free consultation?</div>
+          <div class="faq-answer"><p>Yes — we offer a free 30-minute consultation call for new clients. This gives us a chance to understand your project and advise on the best approach before you commit to anything.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What file formats do you deliver?</div>
+          <div class="faq-answer"><p>We deliver in whatever formats your project requires — WAV (24-bit/48kHz or 24-bit/96kHz), MP3, AIFF, stems, MIDI, OMF/AAF for picture lock. Broadcast and streaming specifications are matched precisely.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS MINI -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">What Clients Say</span>
+        <h2 class="section-title reveal reveal-delay-1">Trusted by Creators Worldwide</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"From the first email to final delivery, the entire experience with AartSense was seamless, professional and genuinely exciting. They made the process feel collaborative and fun."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div>
+              <div class="author-name">Kavya Reddy</div>
+              <div class="author-role">Brand Manager, Hyderabad</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I've worked with many composers over the years — but Arjuna's ability to translate a mood into sound is something special. Fast, brilliant, and a genuine pleasure to work with."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div>
+              <div class="author-name">James Whitfield</div>
+              <div class="author-role">Documentary Director, BBC</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"AartSense gave my album a sound I'd spent years trying to articulate. They understood my vision better than I did, and helped me express it beautifully."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <div class="author-name">Aisha Malik</div>
+              <div class="author-role">Independent Artist, London</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="visualizer" style="margin-bottom:2rem;">
+        <div class="vis-bar"></div><div class="vis-bar"></div><div class="vis-bar"></div>
+        <div class="vis-bar"></div><div class="vis-bar"></div><div class="vis-bar"></div>
+        <div class="vis-bar"></div><div class="vis-bar"></div><div class="vis-bar"></div>
+        <div class="vis-bar"></div><div class="vis-bar"></div><div class="vis-bar"></div>
+      </div>
+      <h2 class="reveal">The Best Projects Begin<br>With a Simple Hello</h2>
+      <p class="reveal reveal-delay-1">Don't overthink it. Drop us a message above or send us an email — we respond to every enquiry personally within 24 hours.</p>
+      <div class="cta-actions reveal reveal-delay-2">
+        <a href="mailto:hello@aartsense.co.uk" class="btn btn-primary">✉ Email Us Directly</a>
+        <a href="portfolio.html" class="btn btn-ghost">See Our Work First →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-icon">
+              <span class="logo-bar"></span><span class="logo-bar"></span>
+              <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Aart<span>Sense</span></span>
+              <span class="logo-tagline">Studios · Est. 2021</span>
+            </div>
+          </a>
+          <p>Award-winning music production house based in England, UK. Crafting soundscapes for film, television, advertising and independent artists worldwide.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/aartsensestudios/" target="_blank" class="social-link">📷</a>
+            <a href="#" class="social-link">▶</a>
+            <a href="#" class="social-link">🎵</a>
+            <a href="#" class="social-link">☁</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="studio.html">The Studio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Film Scoring</a></li>
+            <li><a href="services.html">Commercial Music</a></li>
+            <li><a href="services.html">Recording Studio</a></li>
+            <li><a href="services.html">Mixing & Mastering</a></li>
+            <li><a href="services.html">Album Production</a></li>
+            <li><a href="services.html">Artist Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@aartsense.co.uk">hello@aartsense.co.uk</a></li>
+            <li><a href="tel:+441234567890">+44 (0) 123 456 7890</a></li>
+            <li><a href="#">England, United Kingdom</a></li>
+            <li><a href="contact.html">Book a Session</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-bottom" style="margin-top:2rem;">
+        <p>&copy; 2026 AartSense Studios Ltd. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

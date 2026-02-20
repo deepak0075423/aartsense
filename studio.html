@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Studio — AartSense Studios</title>
+  <meta name="description" content="Explore AartSense's state-of-the-art recording studio in England — acoustically designed, professionally equipped and creatively inspiring." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .studio-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .studio-gallery-item { border-radius:12px; overflow:hidden; aspect-ratio:4/3; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:5rem; transition:var(--transition); }
+    .studio-gallery-item:hover { transform:scale(1.03); border-color:rgba(212,160,23,.42); box-shadow:var(--glow-gold); }
+    .studio-gallery-item.tall { grid-row:span 2; aspect-ratio:auto; min-height:400px; }
+    .spec-table { width:100%; border-collapse:collapse; }
+    .spec-table th, .spec-table td { padding:1rem 1.5rem; text-align:left; border-bottom:1px solid rgba(255,255,255,.05); font-size:.88rem; }
+    .spec-table th { font-family:'JetBrains Mono',monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.15em; color:var(--gold); background:rgba(212,160,23,.05); }
+    .spec-table td { color:var(--text-secondary); }
+    .spec-table tr:last-child td { border-bottom:none; }
+    .spec-table tr:hover td { background:rgba(255,255,255,.02); }
+    .room-card { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; overflow:hidden; transition:var(--transition); }
+    .room-card:hover { border-color:rgba(212,160,23,.42); transform:translateY(-6px); box-shadow:var(--glow-gold); }
+    .room-visual { aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; font-size:5rem; }
+    .room-info { padding:1.75rem; }
+    .room-name { font-size:1.2rem; margin-bottom:.4rem; }
+    .room-spec { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--gold); text-transform:uppercase; letter-spacing:.12em; margin-bottom:.75rem; }
+    .room-desc { font-size:.88rem; color:var(--text-secondary); line-height:1.75; }
+    .rooms-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    @media (max-width:768px) {
+      .studio-gallery { grid-template-columns:1fr 1fr; }
+      .rooms-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-bar"></span><span class="logo-bar"></span>
+          <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Aart<span>Sense</span></span>
+          <span class="logo-tagline">Studios · Est. 2021</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="studio.html" class="active">The Studio</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>The Studio</span>
+      </div>
+      <span class="section-label">The Space</span>
+      <h1>A Sanctuary for<br>Sound Makers</h1>
+      <p>Acoustically designed, professionally equipped and creatively inspiring — our studio is where great music is born every day.</p>
+    </div>
+  </section>
+
+  <!-- STUDIO OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label reveal">Our Studio</span>
+          <h2 class="section-title reveal reveal-delay-1">Built for Excellence</h2>
+          <div class="gold-line reveal reveal-delay-2"></div>
+          <p class="reveal reveal-delay-2">The AartSense studio is an acoustically treated, purpose-built production facility in England, designed to inspire creativity while delivering the technical precision that professional productions demand.</p>
+          <p class="reveal reveal-delay-3">From the carefully tuned live room where musicians breathe life into compositions, to the control room where mixes are sculpted with surgical precision — every detail of the space serves a single purpose: extraordinary sound.</p>
+          <div class="studio-features reveal reveal-delay-3" style="margin-top:2rem;">
+            <div class="studio-feature">
+              <h3><span>🎚️</span> Control Room</h3>
+              <p>Acoustically treated monitoring environment with an SSL-calibre mixing desk and premium studio monitors for flat, accurate sound reproduction.</p>
+            </div>
+            <div class="studio-feature">
+              <h3><span>🎙️</span> Live Recording Room</h3>
+              <p>Diffusion panels and variable absorption create a flexible acoustic environment suitable for everything from whispered vocals to full drum kits.</p>
+            </div>
+            <div class="studio-feature">
+              <h3><span>🎹</span> Isolation Booth</h3>
+              <p>A dedicated isolation booth for pin-drop quiet vocal recording, voiceover work and tracking of sensitive acoustic instruments.</p>
+            </div>
+            <div class="studio-feature">
+              <h3><span>💻</span> Production Suite</h3>
+              <p>A dedicated digital production suite for composition, sound design and post-production work — powered by top-tier hardware and software.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal reveal-delay-2">
+          <div class="about-image-mock" style="font-size:6rem; background:linear-gradient(135deg,#0f0f1e,#1a0533);">🎛️
+            <div class="about-image-decoration"></div>
+          </div>
+          <div class="about-badge">
+            <div class="badge-icon">📐</div>
+            <div class="badge-text">
+              <div class="number">Pro</div>
+              <div class="label">Acoustic Treatment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="section" style="background:var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">The Rooms</span>
+        <h2 class="section-title reveal reveal-delay-1">Studio Spaces</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">Three distinct recording environments to match any creative need — from intimate solo sessions to full ensemble recordings.</p>
+      </div>
+      <div class="rooms-grid">
+        <div class="room-card reveal">
+          <div class="room-visual" style="background:linear-gradient(135deg,#1a0533,#3d0b6e);">🎛️</div>
+          <div class="room-info">
+            <div class="room-name">Control Room A</div>
+            <div class="room-spec">Primary Mix Suite · 32sqm</div>
+            <p class="room-desc">The heart of the studio — our primary mixing and mastering suite features calibrated monitoring, a large-format console surface and an extensive outboard gear rack for analogue warmth.</p>
+          </div>
+        </div>
+        <div class="room-card reveal reveal-delay-1">
+          <div class="room-visual" style="background:linear-gradient(135deg,#001533,#003d6e);">🎙️</div>
+          <div class="room-info">
+            <div class="room-name">Live Room</div>
+            <div class="room-spec">Recording Studio · 48sqm</div>
+            <p class="room-desc">A spacious live room with variable acoustics — from bright and lively to warm and dry — accommodating solo performers, duos, and ensembles up to 8 musicians.</p>
+          </div>
+        </div>
+        <div class="room-card reveal reveal-delay-2">
+          <div class="room-visual" style="background:linear-gradient(135deg,#1a1000,#4a3000);">🎤</div>
+          <div class="room-info">
+            <div class="room-name">Isolation Booth</div>
+            <div class="room-spec">Vocal & Acoustic · 12sqm</div>
+            <p class="room-desc">A pin-drop quiet isolation booth purpose-built for vocal recording, voiceover, and sensitive acoustic instrument tracking. The quietest room in our facility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">The Gear</span>
+        <h2 class="section-title reveal reveal-delay-1">Our Equipment</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">We invest in the finest tools so your music has every advantage — from legendary vintage outboard to cutting-edge digital production platforms.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;" class="reveal">
+        <div>
+          <h3 style="font-size:1.1rem; margin-bottom:1.5rem; color:var(--gold); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.1em; font-size:.75rem;">Digital Audio Workstations</h3>
+          <table class="spec-table">
+            <thead><tr><th>Software</th><th>Primary Use</th></tr></thead>
+            <tbody>
+              <tr><td>Avid Pro Tools Ultimate</td><td>Recording & Editing</td></tr>
+              <tr><td>Steinberg Nuendo 13</td><td>Post-Production</td></tr>
+              <tr><td>Apple Logic Pro X</td><td>Composition & MIDI</td></tr>
+              <tr><td>Ableton Live 12 Suite</td><td>Electronic Production</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem; margin-bottom:1.5rem; color:var(--gold); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.1em; font-size:.75rem;">Monitoring</h3>
+          <table class="spec-table">
+            <thead><tr><th>Monitor</th><th>Type</th></tr></thead>
+            <tbody>
+              <tr><td>Genelec 8351B</td><td>Primary Mains</td></tr>
+              <tr><td>Yamaha HS8</td><td>Secondary Reference</td></tr>
+              <tr><td>Audeze LCD-X</td><td>Headphone Monitoring</td></tr>
+              <tr><td>NS-10M Studio</td><td>Near-Field Reference</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="equipment-grid" style="margin-top:3rem;">
+        <div class="equipment-card reveal"><div class="equipment-icon">🎤</div><div class="equipment-name">Neumann U87</div><div class="equipment-brand">Condenser Microphone</div></div>
+        <div class="equipment-card reveal reveal-delay-1"><div class="equipment-icon">🎙️</div><div class="equipment-name">AKG C414</div><div class="equipment-brand">Condenser Microphone</div></div>
+        <div class="equipment-card reveal reveal-delay-2"><div class="equipment-icon">🔌</div><div class="equipment-name">Universal Audio Apollo x8p</div><div class="equipment-brand">Audio Interface</div></div>
+        <div class="equipment-card reveal reveal-delay-3"><div class="equipment-icon">🎹</div><div class="equipment-name">Yamaha C3 Grand</div><div class="equipment-brand">Concert Grand Piano</div></div>
+        <div class="equipment-card reveal"><div class="equipment-icon">🎛️</div><div class="equipment-name">SSL G-Master Bus</div><div class="equipment-brand">Analogue Compressor</div></div>
+        <div class="equipment-card reveal reveal-delay-1"><div class="equipment-icon">🔊</div><div class="equipment-name">Neve 1073</div><div class="equipment-brand">Mic Preamp / EQ</div></div>
+        <div class="equipment-card reveal reveal-delay-2"><div class="equipment-icon">🎸</div><div class="equipment-name">Fender Stratocaster</div><div class="equipment-brand">Electric Guitar</div></div>
+        <div class="equipment-card reveal reveal-delay-3"><div class="equipment-icon">🪘</div><div class="equipment-name">Pearl Masters</div><div class="equipment-brand">Drum Kit</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIRTUAL INSTRUMENTS / LIBRARIES -->
+  <section class="section" style="background:var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Virtual Arsenal</span>
+        <h2 class="section-title reveal reveal-delay-1">Sample Libraries & Plugins</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">Our extensive library of orchestral samples, ethnic instruments and cinematic sound design tools enables us to realise virtually any musical vision.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🎻</div>
+          <h3>Spitfire Audio</h3>
+          <p>BBC Symphony Orchestra, Hans Zimmer Strings, and LABS collections — the foundation of our cinematic orchestral palette.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">🪘</div>
+          <h3>Native Instruments</h3>
+          <p>Komplete 14 Ultimate including Kontakt, Massive X, and Reaktor — covering synthesis, sampling and rhythm with unmatched depth.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">🌍</div>
+          <h3>EastWest Libraries</h3>
+          <p>Goliath, Hollywood Strings and Composer Cloud — vast orchestral and world music libraries for cinematic productions.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎹</div>
+          <h3>Arturia V Collection</h3>
+          <p>Classic synthesiser emulations for creating rich retro and contemporary electronic textures with authentic character.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">🔊</div><h3>Waves Plugins</h3>
+          <p>Complete mixing and mastering plugin suite covering dynamics, EQ, spatial processing and analogue emulations.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">🎭</div>
+          <h3>Indian Classical Libraries</h3>
+          <p>Curated Indian classical instrument libraries including sitar, tabla, sarod, bansuri and tanpura for authentic Eastern compositions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Book the Studio</span>
+        <h2 class="section-title reveal reveal-delay-1">Session Rates</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">Flexible booking options for artists, producers and post-production teams of all sizes.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-name">Half Day</div>
+          <div class="pricing-price"><sup>£</sup>280</div>
+          <div class="pricing-period">4 hours · Engineer included</div>
+          <ul class="pricing-features">
+            <li>Choice of recording room</li>
+            <li>In-house engineer</li>
+            <li>All mic & DI options</li>
+            <li>Digital tracking to Pro Tools</li>
+            <li>Basic session files delivered</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%; justify-content:center;">Book Half Day</a>
+        </div>
+        <div class="pricing-card featured reveal reveal-delay-1">
+          <div class="pricing-name">Full Day</div>
+          <div class="pricing-price"><sup>£</sup>480</div>
+          <div class="pricing-period">8 hours · Engineer included</div>
+          <ul class="pricing-features">
+            <li>All rooms available</li>
+            <li>Dedicated in-house engineer</li>
+            <li>Full outboard gear access</li>
+            <li>Comping & rough mix included</li>
+            <li>24-bit session files delivered</li>
+            <li>Complimentary refreshments</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book Full Day</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="pricing-name">Block Booking</div>
+          <div class="pricing-price"><sup>£</sup>380</div>
+          <div class="pricing-period">Per day · 5+ days</div>
+          <ul class="pricing-features">
+            <li>All rooms available</li>
+            <li>Dedicated project engineer</li>
+            <li>Priority scheduling</li>
+            <li>Full mix & production support</li>
+            <li>Locker storage between sessions</li>
+            <li>10% off mixing & mastering</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%; justify-content:center;">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="reveal">Ready to Step into the Studio?</h2>
+      <p class="reveal reveal-delay-1">Book your session today and experience the difference a great studio makes to your music.</p>
+      <div class="cta-actions reveal reveal-delay-2">
+        <a href="contact.html" class="btn btn-primary">Book a Studio Session</a>
+        <a href="services.html" class="btn btn-ghost">See All Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0;">
+            <div class="logo-icon">
+              <span class="logo-bar"></span><span class="logo-bar"></span>
+              <span class="logo-bar"></span><span class="logo-bar"></span><span class="logo-bar"></span>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Aart<span>Sense</span></span>
+              <span class="logo-tagline">Studios · Est. 2021</span>
+            </div>
+          </a>
+          <p>Award-winning music production house based in England, UK.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/aartsensestudios/" target="_blank" class="social-link">📷</a>
+            <a href="#" class="social-link">▶</a>
+            <a href="#" class="social-link">🎵</a>
+            <a href="#" class="social-link">☁</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="studio.html">The Studio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Film Scoring</a></li>
+            <li><a href="services.html">Commercial Music</a></li>
+            <li><a href="services.html">Recording Studio</a></li>
+            <li><a href="services.html">Mixing & Mastering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@aartsense.co.uk">hello@aartsense.co.uk</a></li>
+            <li><a href="#">England, United Kingdom</a></li>
+            <li><a href="contact.html">Book a Session</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-bottom" style="margin-top:2rem;">
+        <p>&copy; 2026 AartSense Studios Ltd. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
