@@ -73,7 +73,13 @@ const counterObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.5 });
 
-document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+document.querySelectorAll('[data-target]').forEach(el => {
+  // Pre-set the element's width to its final value so it never reflows
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  el.style.minWidth = (target + suffix).toString().length + 'ch';
+  counterObserver.observe(el);
+});
 
 /* ======================== WAVE CANVAS ======================== */
 const canvas = document.getElementById('waveCanvas');
